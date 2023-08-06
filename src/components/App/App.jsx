@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Container, Title, SubTitle, Wrapper } from './App.styled';
 
 import { nanoid } from 'nanoid';
 import Notiflix from 'notiflix';
