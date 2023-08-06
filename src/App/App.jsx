@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Container, Title, SubTitle, Wrapper } from './App.styled';
 import ContactForm from '../../components/ContactForm/ContactForm';
 
-
 import { nanoid } from 'nanoid';
 import Notiflix from 'notiflix';
 
@@ -62,23 +61,22 @@ export class App extends Component {
     const visualContacts = this.getVisualContacts();
     const { filter } = this.state;
     return (
-        <Container>
-            <Title>Phonebook</Title>
-            <ContactForm onSubmit={this.addContact} />
-            <SubTitle>Contacts</SubTitle>
-            {this.state.contacts.length > 0 ? (
-                <Filter value={filter} onChangeFilter= {this.changeFilter} />
-            ) : (
-                <Wrapper>The contact book is empty!
-                Add new contacts</Wrapper>
-            )}
-            {this.state.contacts.length > 0 && (
-                <ContactList
-                    contacts={visualContacts}
-                    onDeleteContact={this.deleteContact}
-                />
-            )}
-        </Container>
-    )
+      <Container>
+        <Title>Phonebook</Title>
+        <ContactForm onSubmit={this.addContact} />
+        <SubTitle>Contacts</SubTitle>
+        {this.state.contacts.length > 0 ? (
+          <Filter value={filter} onChangeFilter={this.changeFilter} />
+        ) : (
+          <Wrapper>The contact book is empty! Add new contacts</Wrapper>
+        )}
+        {this.state.contacts.length > 0 && (
+          <ContactList
+            contacts={visualContacts}
+            onDeleteContact={this.deleteContact}
+          />
+        )}
+      </Container>
+    );
   }
 }
