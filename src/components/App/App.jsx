@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Title, SubTitle, Wrapper } from './App.styled';
+import ContactForm from '../../components/ContactForm/ContactForm';
+
 
 import { nanoid } from 'nanoid';
 import Notiflix from 'notiflix';
