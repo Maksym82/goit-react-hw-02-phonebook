@@ -1,7 +1,8 @@
 import React from 'react';
+import { List, Item, Button } from './ContactList.styled'
 
 import PropTypes from 'prop-types';
-import { Button } from 'components/ContactForm/ContactForm.styled';
+
 
 export const ContactList = ({ contacts, onDeleteContact }) => (
   <List>
@@ -24,7 +25,7 @@ export const ContactList = ({ contacts, onDeleteContact }) => (
 
 ContactList.propTypes = {
   contacts: PropTypes.arrayOf(
-    PropTupes.exact({
+    PropTypes.exact({
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       number: PropTypes.string.isRequired,
