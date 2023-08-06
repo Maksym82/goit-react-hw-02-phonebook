@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Container, Title, SubTitle, Wrapper } from './App.styled';
-import ContactForm from '../../components/ContactForm/ContactForm';
-import ContactList from '../components/ContactList/ContactList';
-import Filter from '../components/Filter/Filter';
+import ContactForm from '../ContactForm/ContactForm';
+import {ContactList} from '../ContactList/ContactList';
+import Filter from '../Filter/Filter';
 
 import { nanoid } from 'nanoid';
 import Notiflix from 'notiflix';
 
-export class App extends Component {
+export default class App extends Component {
   state = {
     contacts: [
       { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
@@ -54,7 +54,7 @@ export class App extends Component {
 
     return contacts.filter(
       contact =>
-        contact.name.toLoverCase().includes(filter.toLowerCase()) ||
+        contact.name.toLowerCase().includes(filter.toLowerCase()) ||
         contact.number.includes(filter)
     );
   };
@@ -76,6 +76,7 @@ export class App extends Component {
           <ContactList
             contacts={visualContacts}
             onDeleteContact={this.deleteContact}
+           
           />
         )}
       </Container>

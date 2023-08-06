@@ -33,3 +33,7 @@ export const Button = styled.button`
     border: 1px solid green;
     cursor: pointer;
 `;
+
+export const Text = styled.p`
+
+`;
