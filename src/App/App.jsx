@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Title, SubTitle, Wrapper } from './App.styled';
 import ContactForm from '../../components/ContactForm/ContactForm';
-import ContactList from '../components/ContactList/ContactList'
+import ContactList from '../components/ContactList/ContactList';
+import Filter from '../components/Filter/Filter';
 
 import { nanoid } from 'nanoid';
 import Notiflix from 'notiflix';
