@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { FilterCont, Label, Input } from './Filter.styled'
 export function Filter({ value, onChangeFilter }) {
   return (
     <FilterCont>
